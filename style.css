@@ -8,9 +8,9 @@ body {
     text-align: center;
 }
 
-.blue {
-    background-color: #4682b4;
-    color: white;
+.blue, .on {
+    background-color: #4682b4 !important;
+    color: white !important;
 }
 
 .no-margin {
@@ -52,4 +52,26 @@ footer {
     background-color: black;
     width: calc(100vw - 12px);
     padding: 3px 6px;
+}
+
+.profile {
+    width: 200px;
+}
+
+.sections {
+    margin: 40px 0px;
+}
+
+.section {
+    padding: 10px;
+    background-color: white;
+    margin: 5px 0px;
+}
+
+.sub {
+    margin-left: 25px;
+}
+
+.section p {
+    margin: 0px;
 }
