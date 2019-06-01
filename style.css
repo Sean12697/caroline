@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0px;
+    /* overflow: hidden; */
+}
+
+.steelBlue, header {
+    background-color: #4682b4;
+    color: white;
+}
+
+header, section {
+    padding: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    text-align: right;
+    padding: 0px 10px;
+}
+
+.item {
+    display: inline-block;
+    width: 200px;
+    margin: 30px;
+}
+
+header > p, section > p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header > p {
+    padding-bottom: 20px;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    width: calc(100vw - 12px);
+    padding: 3px 6px;
+}
