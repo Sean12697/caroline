@@ -75,3 +75,11 @@ footer {
 .section p {
     margin: 0px;
 }
+
+.profile img {
+    width: 100%;
+}
+
+.item img {
+    width: 30%;
+} 
