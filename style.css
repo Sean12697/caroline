@@ -106,12 +106,19 @@ s {
     filter: opacity(0.5);
 }
 
-#sadTweetsContainer {
+.dataContainer {
     display: inline-block;
+}
+
+.sadTweetsContainer {
     width: 300px;
 }
 
-.sadTweet {
+.moodTweetsContainer {
+    width: 500px;
+}
+
+.tweet {
     background-color: white;
     padding: 10px 15px;
     margin: 10px 0px;

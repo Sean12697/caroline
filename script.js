@@ -1,15 +1,17 @@
 const api = "https://caroline-server.herokuapp.com/"; // user/Sean12697
 
 window.addEventListener("load", () => {
+
     let params = paramsToObj();
+    
     reqData("GET", {}, `${api}user/${ params.user ? params.user : "Sean12697" }`, (data) => {
         console.log(data);
         document.getElementById("name").innerHTML = data.user.name;
         document.getElementById("img").src = data.user.profile_image_url;
         document.getElementById("sadTweets").innerHTML = data.sadTweets.map(tweet => 
-            `<div class="sadTweet">
+            `<div class="tweet">
                 <p class="date"><a href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}" target="_blank">${tweet.created_at.substr(0, tweet.created_at.length-11)}</a></p>
-                <p class="tweet">${tweet.text.split(" ").map(word => tweet.sentiment.negative.includes(word) ? "<b>" + word + "</b>" : word).join(" ")}</p>
+                <p>${tweet.full_text.split(" ").map(word => tweet.sentiment.negative.includes(word) ? "<b>" + word + "</b>" : word).join(" ")}</p>
             </div>`
             ).join("");
         anychart.fromJson(lineChartTemplate("Sentiment Trend over Time", data.avgSentiments.map((value, time) => {
@@ -19,6 +21,16 @@ window.addEventListener("load", () => {
             }
         }), "avgSentiment")).draw();
     }, (err) => {});
+
+    reqData("GET", {}, `${api}userMood/${ params.user ? params.user : "Sean12697" }`, (data) => {
+        console.log("Day Mood Data: ", data);
+        document.getElementById("moodTweets").innerHTML = data.map(tweet => 
+            `<div class="tweet">
+                <p>${JSON.stringify(tweet)}</p>
+            </div>`
+            ).join("");
+    }, (err) => {});
+    
 });
 
 function reqData(type, params, url, callback, errorCallback) {
