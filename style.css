@@ -1,41 +1,49 @@
 body {
     font-family: sans-serif;
-    text-align: center;
     margin: 0px;
     /* overflow: hidden; */
 }
 
-.steelBlue, header {
+.center {
+    text-align: center;
+}
+
+.blue {
     background-color: #4682b4;
     color: white;
+}
+
+.no-margin {
+    margin: 0px;
 }
 
 header, section {
     padding: 20px;
 }
 
-header {
-    position: sticky;
-    top: 0;
+section {
+    background-color: #f6f7f8;
 }
 
 nav {
     text-align: right;
     padding: 0px 10px;
+    position: sticky;
+    top: 0;
 }
 
 .item {
     display: inline-block;
     width: 200px;
-    margin: 30px;
+    margin: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
 }
 
 header > p, section > p {
     max-width: 800px;
     margin: 0 auto;
-}
-
-header > p {
     padding-bottom: 20px;
 }
 
