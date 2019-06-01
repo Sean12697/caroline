@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
         document.getElementById("img").src = data.user.profile_image_url;
         document.getElementById("sadTweets").innerHTML = data.sadTweets.map(tweet => 
             `<div class="sadTweet">
-                <p class="date"><a href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id}" target="_blank">${tweet.created_at.substr(0, tweet.created_at.length-11)}</a></p>
+                <p class="date"><a href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}" target="_blank">${tweet.created_at.substr(0, tweet.created_at.length-11)}</a></p>
                 <p class="tweet">${tweet.text.split(" ").map(word => tweet.sentiment.negative.includes(word) ? "<b>" + word + "</b>" : word).join(" ")}</p>
             </div>`
             ).join("");
