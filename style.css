@@ -93,8 +93,9 @@ footer {
 }
 
 .data {
-    width: calc(100vw - 270px);
+    width: calc(100vw - 320px);
     margin: 0 auto;
+    padding: 0px 20px;
 }
 
 .anychart-credits {
@@ -103,4 +104,15 @@ footer {
 
 s {
     filter: opacity(0.5);
+}
+
+#sadTweetsContainer {
+    display: inline-block;
+    width: 300px;
+}
+
+.sadTweet {
+    background-color: white;
+    padding: 10px 15px;
+    margin: 10px 0px;
 }
