@@ -86,3 +86,17 @@ footer {
 .item img {
     width: 30%;
 } 
+
+.profile, .data {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.data {
+    width: calc(100vw - 270px);
+    margin: 0 auto;
+}
+
+.anychart-credits {
+    display: none !important;
+}
