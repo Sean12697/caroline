@@ -117,11 +117,20 @@ s {
 }
 
 .moodTweetsContainer {
-    width: 500px;
+    width: calc(100vw - 635px);
 }
 
 .tweet {
     background-color: white;
     padding: 10px 15px;
     margin: 10px 0px;
+}
+
+.mood {
+    display: inline-block;
+    text-align: center;
+    width: 69px;
+    margin: 0px 5px;
+    border: #b3b3b3 solid 1px;
+    padding: 0px 5px;
 }
