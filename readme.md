@@ -1,4 +1,4 @@
-# Caroline (Your Careerer Online)
+# Caroline (Your Carer Online)
 
 This is the GitHub repo for the demo made at the 'Free Your Mind' Hackathon by Code Nation & EMIS Health.
 
